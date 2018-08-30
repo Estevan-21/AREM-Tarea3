@@ -33,8 +33,7 @@ public class Browser {
         String inputLine = null;
         String data="";
         while ((inputLine = reader.readLine()) != null) {          
-            data+=inputLine;
-            System.out.println(inputLine);
+            data+=inputLine;            
         }    
         write(data);
         } catch (IOException x) {
