@@ -17,7 +17,7 @@ public class MetodosUrl {
         
     
     public static void main(String[] args) throws Exception {     
-        URL site = new URL("http://Ejercicio1.escuelaing.edu.co:80/24/08/18/index.html");         
+        URL site = new URL("http://Ejercicio1.escuelaing.edu.co:80/24/08/18/index.html?x=20&y=3");         
         System.out.println("Protocol: "+site.getProtocol());
         System.out.println("Atority "+site.getAuthority());        
         System.out.println("Host: "+site.getHost());
