@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.escuelaing.arem.taller3.ejercicio4;
+package edu.escuelaing.arem.taller3.ejercicio431;
 
 import java.net.*;
 import java.io.*;
@@ -11,7 +11,7 @@ import java.io.*;
  *
  * @author estevan
  */
-public class EchoServer {
+public class SquareServer {
     public static void main(String[] args) throws IOException {
 
         ServerSocket serverSocket = null;
@@ -35,12 +35,15 @@ public class EchoServer {
             new InputStreamReader(
             clientSocket.getInputStream()));
         
-        String inputLine, outputLine;
-        while ((inputLine = in.readLine()) != null) {
-            System.out.println("Mensaje:" + inputLine);
-            outputLine = "Respuesta: " + inputLine ;
-            out.println(outputLine);
-            if (outputLine.equals("Respuesta: Bye."))
+        String inputLine, outputLine;     
+        int numero, respuesta;        
+        while ((inputLine = in.readLine()) != null) {            
+            System.out.println("Mensaje:" + inputLine);              
+            numero=Integer.parseInt(inputLine);
+            respuesta=numero*numero;
+            outputLine=Integer.toString(respuesta);
+            out.println(outputLine);                      
+            if (outputLine.equals("Respuestas: Bye."))
                 break;
             }
 
@@ -50,4 +53,3 @@ public class EchoServer {
         serverSocket.close();
         }
 }
-
